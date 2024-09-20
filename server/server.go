@@ -4,6 +4,7 @@ import (
 	"personal-portfolio/routes"
 
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 type Server struct {
@@ -18,8 +19,10 @@ func (s *Server) Start() error {
 
 	app := echo.New()
 
+	app.Use(middleware.Gzip())
+
 	// Register routes
-	routes.Register(app)
+	routes.RegisterRoutes(app)
 
 	return app.Start(":8080")
 }
