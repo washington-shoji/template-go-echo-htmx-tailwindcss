@@ -5,8 +5,8 @@
 
 ### Build input and output CSS
 
-./tailwindcss -i ./assets/css/tailwind.css -o ./public/css/tailwind.min.css --minify
+./tailwindcss -i ./assets/css/tailwind.css -o ./views/public/styles.css --minify
 
 ### Watch mode for input and output CSS
 
-./tailwindcss -i ./assets/css/tailwind.css -o ./public/css/tailwind.min.css --watch
+./tailwindcss -i ./assets/css/tailwind.css -o ./views/public/styles.css --watch
