@@ -1,0 +1,28 @@
+package shared
+
+templ Page(title string) {
+	<!DOCTYPE html>
+	<html lang="en" class="h-full">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>{ title }</title>
+		<link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon"/>
+		<meta charset="utf-8"/>
+		<meta name="description" content="Personal Project"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="robots" content="index, follow"/>
+		<meta name="revisit-after" content="7 days"/>
+		<meta name="language" content="English"/>
+		<script src="/public/vendor/htmx.org@2.0.2.js" defer></script>
+		<script src="assets/js/"></script>
+		<link rel="stylesheet" href="/public/tailwind.min.css"/>
+
+	</head>
+	<body class="h-full bg-yellow-50 font-mono">
+		<section class="max-w-lg mx-auto my-2">
+			<h1 class="text-8xl font-black text-center m-0 pb-2">Personal Project</h1>
+			{ children... }
+		</section>
+	</body>
+	</html>
+}
