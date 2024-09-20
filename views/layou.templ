@@ -1,0 +1,27 @@
+package views
+
+templ Layout(title string) {
+	<!DOCTYPE html>
+	<html lang="en" class="h-full">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>{ title }</title>
+		<link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon"/>
+		<meta charset="utf-8"/>
+		<meta name="description" content="Personal Project"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="robots" content="index, follow"/>
+		<meta name="revisit-after" content="7 days"/>
+		<meta name="language" content="English"/>
+		<script src="/public/vendor/htmx.org@2.0.2.js" defer></script>
+		<script src="assets/js/"></script>
+		<link rel="stylesheet" href="/public/styles.css"/>
+
+	</head>
+	<body class="h-full" hx-boost="true">
+			<main class="max-w-screen-sm mx-auto h-full px-8 py-12">
+				{ children... }
+			</main>
+		</body>
+	</html>
+}
