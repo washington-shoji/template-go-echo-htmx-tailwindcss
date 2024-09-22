@@ -1,4 +1,4 @@
-# personal-portfolio
+# Starter template for Go, Echo, HTMX, Templ and Tailwind CSS
 
 ## Tailwind Binary
 
