@@ -1,0 +1,44 @@
+package views
+
+import "fmt"
+
+templ Count(count int) {
+	<section
+		hx-target="this"
+		hx-swap="outerHTML"
+		hx-push-url="false"
+		class="bg-white dark:bg-gray-900"
+	>
+		<div class="p-4 mb-4 text-blue-800 border border-blue-300 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400 dark:border-blue-800">
+			<div class="flex items-center">
+				<svg class="flex-shrink-0 w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+					<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"></path>
+				</svg>
+				<h3 class="text-lg font-medium">This is a counter example</h3>
+			</div>
+			<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+				<div class="flex items-center flex-col gap-6  bg-base-300 rounded-lg mx-auto p-8">
+					<h2 class="text-5xl">
+						<strong>{ fmt.Sprintf("%d", count) }</strong>
+					</h2>
+					<fieldset class="flex items-center gap-4">
+						<button
+							hx-post="/count/dec"
+							class="inline-flex w-full items-center text-white justify-center bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-500 dark:hover:bg-red-600 dark:focus:ring-red-900"
+							type="submit"
+						>
+							-1
+						</button>
+						<button
+							hx-post="/count/inc"
+							class="text-white w-full inline-flex items-center justify-center bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+							type="submit"
+						>
+							+1
+						</button>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</section>
+}
