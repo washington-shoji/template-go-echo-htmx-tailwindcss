@@ -6,8 +6,8 @@ templ Home(title string, count int) {
 			<h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
 				Hello, HTMX App!
 			</h1>
-			<p>This page build with Golang, Echo, templ, TailwindCSS.</p>
-			<p>The below component uses htmx to update a count on click, try it out and see it working:</p>
+			<p class="mb-4 font-semibold">This page build with Golang, Echo, templ, TailwindCSS.</p>
+			<p class="mb-4 font-semibold">The below component uses htmx to update a count on click, try it out and see it working:</p>
 			@Count(count)
 		</section>
 	}

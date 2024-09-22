@@ -41,7 +41,7 @@ func Home(title string, count int) templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<section class=\"flex flex-col justify-between px-4 mx-auto max-w-screen-xl\"><h1 class=\"mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white\">Hello, HTMX App!</h1><p>This page build with Golang, Echo, templ, TailwindCSS.</p><p>The below component uses htmx to update a count on click, try it out and see it working:</p>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<section class=\"flex flex-col justify-between px-4 mx-auto max-w-screen-xl\"><h1 class=\"mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white\">Hello, HTMX App!</h1><p class=\"mb-4 font-semibold\">This page build with Golang, Echo, templ, TailwindCSS.</p><p class=\"mb-4 font-semibold\">The below component uses htmx to update a count on click, try it out and see it working:</p>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
